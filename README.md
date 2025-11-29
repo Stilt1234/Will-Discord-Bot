@@ -1,4 +1,3 @@
-# Its Will!
 ---
 title: Will Discord Bot
 emoji: 📊
