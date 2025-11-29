@@ -5,7 +5,7 @@ colorFrom: indigo
 colorTo: blue
 sdk: gradio
 sdk_version: 6.0.1
-app_file: app.py
+app_file: main.py
 pinned: false
 license: apache-2.0
 short_description: Its Will!
