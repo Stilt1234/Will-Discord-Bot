@@ -9,6 +9,7 @@ app_file: app.py
 pinned: false
 license: apache-2.0
 short_description: Its Will!
+python_version: 3.12.1
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
