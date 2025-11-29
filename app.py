@@ -3,10 +3,10 @@ import os
 from main import bot
 
 def greet(name):
+    bot.run(os.getenv("TOKEN"))
     return "Hello " + name + "!!"
 
 demo = gr.Interface(fn=greet, inputs="text", outputs="text")
 
-bot.run(os.getenv("TOKEN"))
 demo.launch()
 print("hi")
