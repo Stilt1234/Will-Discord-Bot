@@ -36,7 +36,7 @@ def valid_server_details(ctx: commands.Context, ip: str, rcon_password: str):
     if(ip == None or len(ip) == 0):
         ctx.send("");
     elif(rcon_password == None or len(rcon_password) == 0):
-    
+        pass
     try:
         with MCRcon(ip, rcon_password) as rcon:
             return True
