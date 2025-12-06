@@ -67,14 +67,13 @@ async def on_message(message: discord.Message):
         will_emoji = discord.utils.get(message.guild.emojis, name = "will")
         will_cube_emoji = discord.utils.get(message.guild.emojis, name="willcube")
         cirb_emoji = discord.utils.get(message.guild.emojis, name="cirb")
-        if(message.content.find("WILL") != -1 and will_emoji != None):
+        if(message.content.find("WILL") != -1 and will_emoji != None and will_cube_emoji != None):
             await message.add_reaction(will_emoji)
-        elif(message.content.find("WILL") != -1 and will_cube_emoji != None):
             await message.add_reaction(will_cube_emoji)
         elif(message.content.find("CIRB") != -1 and cirb_emoji != None):
             await message.add_reaction(cirb_emoji)
         elif(discord.utils.get(message.guild.emojis, name = "will") == None):
-            await message.channel.send(embed=discord.Embed(colour=discord.Colour.red(), title="Please upload will emoji.", timestamp=message.created_at))
+            await message.channel.send(embed=discord.Embed(colour=discord.Colour.red(), title="Please upload will, will cube and cirb emojis.", timestamp=message.created_at))
     await bot.process_commands(message)
 
 @bot.hybrid_command(name="server_ip", description="Sets mc server ip. Only for admins.")
